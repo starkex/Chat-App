@@ -59,11 +59,56 @@ html{
     background-position: 15px center;
     background-size: 20px 10px;
 }
+
+#search-container input::placeholder{
+    color: seashell;
+    font-weight: bold;
+}
+
 #conversation-list{
     grid-area: conversation-list;
 }
 
-#new-message-cnotainer{
+.conversation{
+    display: grid;
+    grid-template-columns: 40px 1fr max-content;
+    color: #ddd;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #002C88;
+    padding: 20ox 20px 20px 15px;
+}
+.conversation.active,
+.conversation:hover{
+    background: #002C88;
+}
+.conversation:hover{
+    cursor:pointer;
+}
+.conversation>img{
+    height:40px;
+    border-radius:100%;
+
+}
+.title-text{
+    font-weight: bold;
+    color: #ddd;
+}
+
+#new-message-container a{
+display: grid;
+place-content: center center;
+background:#eee;
+border-radius: 100%;
+color: #002C88;
+text-decoration: none;
+font-size: 3.6rem;
+
+
+} 
+#new-message-container{
+    display: grid;
+    grid: 40px / 40px;
+    align-content: center;
     grid-area: new-message-container;
     border-top: 1px solid rgba(0,0,0,0.25);
     border-radius: 0 0 0 10px;
@@ -75,19 +120,45 @@ html{
 }
 
 #chat-title{
+    display: grid;
+    grid: 36px / 1fr 36px;
+    align-content: center;
+    align-items: center;
+    padding: 0 20px;
+    grid-area:chat-title;
     color:#0048AA;
     font-weight:bold;
     font-size:2.0rem;
     border-radius: 0 10px 0 0;
     box-shadow:  0 1px 3px -1px rgba(0,0,0,0.75);
-    grid-area:chat-title;
+    
+}
+
+#chat-title > img{
+    cursor: pointer;
 
 }
+
 #chat-message-list{
     grid-area:chat-message-list ;
 }
 #chat-form{
-    grid-area:chat-form;
+    display: grid;
+    grid: 51px / 32px 1fr;
+    align-items: center;
+    align-content: center;
+    grid-gap:15px;
     border-radius: 0 0 10px 0;
     border-top: 1px solid rgba(0,0,0,0.25);
+    padding-left: 42px;
+    padding-right: 22px;
+    grid-area:chat-form;
+    
+}
+#chat-form input{
+    outline: none;
+    padding:15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size:1.4rem;
 }
