@@ -172,6 +172,7 @@ font-size: 3.6rem;
 }
 
 .message-row{
+    padding: 20px;
     display: grid;
     grid-template-columns: 70%;
     margin-bottom: 20px;
