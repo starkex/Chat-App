@@ -72,6 +72,7 @@ html{
 .conversation{
     display: grid;
     grid-template-columns: 40px 1fr max-content;
+    grid-gap: 10px;
     color: #ddd;
     font-size: 1.3rem;
     border-bottom: 1px solid #002C88;
@@ -85,14 +86,20 @@ html{
     cursor:pointer;
 }
 .conversation>img{
+    grid-row: span 2;
     height:40px;
     border-radius:100%;
 
 }
 .title-text{
     font-weight: bold;
-    color: #ddd;
+    color: #eee;
 }
+.created-date{
+    color:#ddd;
+    font-size: 1rem;
+}
+
 
 #new-message-container a{
 display: grid;
