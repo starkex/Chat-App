@@ -67,6 +67,7 @@ html{
 
 #conversation-list{
     grid-area: conversation-list;
+    
 }
 
 .conversation{
@@ -94,12 +95,23 @@ html{
 .title-text{
     font-weight: bold;
     color: #eee;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 .created-date{
     color:#ddd;
     font-size: 1rem;
+    
 }
-
+.conversation-message{
+    grid-column: span 2;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
 
 #new-message-container a{
 display: grid;
@@ -145,9 +157,42 @@ font-size: 3.6rem;
     cursor: pointer;
 
 }
+#chat-message-list{
+    grid-area: chat-message-list;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.message-row{
+    margin-bottom: 20px;
+}
+.message-text{
+    padding:9px 14px;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+.message-time{
+    font-size: 1.3rem;
+    color:#777;
+}
+
+.you-message .message-text{
+    background: #0048AA;
+    color:#eee;
+    border: 1px solid #0048AA;
+    border-radius: 14px 14px 14px 14px;
+}
+.other-message .message-text{
+    background: #ddd;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 14px 14px 14px 14px;
+}
+
 
 #chat-message-list{
     grid-area:chat-message-list ;
+    overflow-y: scroll;
 }
 #chat-form{
     display: grid;
@@ -168,4 +213,7 @@ font-size: 3.6rem;
     border: 2px solid #ddd;
     border-radius: 6px;
     font-size:1.4rem;
+}
+::webkit-scrollbar{
+display: none;
 }
